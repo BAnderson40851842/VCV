@@ -3,31 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Portfolio</title>
 </head>
 <body>
-        <main class="main-content">
-            <section class="left-section">
-                <div class="profile">
-                    <img src="/Picture1.png" alt="">
-                    <h2 class="name">Brian Anderson</h2>
-                    <p class="career">Junior developer</p>
+    <!--NAVBAR-->
+    <nav>
+        <div class="left">
+            <a href="#" onclick="showMain();hideCV();">HOME</a>
+        </div>
+        <div class="right">
+            <a href="#" onclick="hideMain();showCV();">
+                <i class="fa-solid fa-clipboard"></i>
+                <span>CV</span>
+            </a>
+
+            <a href="https://github.com/BAnderson40851842" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>   
+            </a>
+
+            <a href="https://www.linkedin.com/in/bri-anderson-5080652a0/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>   
+            </a>
+
+            <a href="mailto:anderson.bri1909@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>   
+            </a>
+
+            
+        </div>
+    </nav>
+
+    <script>
+        function hideMain(){
+            var allcontent = document.getElementById('content-main');
+                allcontent.style.display='none';
+        }
+
+        function showMain(){
+            var allcontent = document.getElementById('content-main');
+                allcontent.style.display='block';
+        }
+
+        function hideCV(){
+            var allcontent = document.getElementById('content-CV');
+                allcontent.style.display='none';
+        }
+
+        function showCV(){
+            var allcontent = document.getElementById('content-CV');
+                allcontent.style.display='block';
+        };
+    </script>
+
+    <main>
+        <div id="content-main">
+            <!--Section 1 - Description-->
+            <section class="pdescript">
+                <div class="text">
+                    <h2>Brian Anderson</h2>
+
+                    <div class="links">
+                        <a href="#about-me">
+                            <i class="fa-solid fa-user"></i>
+                            <span>About me</span>
+                        </a>
+                        <a href="#skills">
+                            <i class="fa-solid "></i>
+                            <span>Coding Languages</span>
+                        </a>
+                        <a href="#contact-me">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Contact me</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="contact-info">
-                    <h3 class="main-title">Contact Info</h3>
-                    <ul>
-                        <li>
-                            <i class="fa fa-facebook"></i>
-                        </li>
-                    </ul>
+
+                <div class="headshot">
+                    <img src="Pictures\Picture1.png">
                 </div>
             </section>
-            <section class="right-section"></section>
-        </main>
+
+            <!--Section 2 - About me-->
+            <section id="about-me" class="about-me">
+                <div class="text">
+                    <h2>About me</h2>
+                    <p>As a third-year BSc Information Technology student at the University of the
+                        Northwest, I pride myself on being a diligent and highly driven individual,
+                        committed to excelling in every task I undertake. My eagerness to expand my
+                        knowledge base is matched by my ability to learn rapidly, ensuring that I am
+                        consistently at the forefront of my field. With a strong foundation in IT and a
+                        passion for achieving excellence, I am poised to make a significant impact in a
+                        dynamic professional environment.</p>    
+                </div>
+                
+            </section>
+
+            <!--Section 3 - Skills-->
+            <section id="skills" class="skills-section">
+                <h2>Coding Languages</h2>
+            
+                <h3>Programming Languages</h3>
+                <div class="cells">
+                    <div class="cell">
+                        <img src="Screenshot 2024-08-02 223602.png" >
+                    </div>
+
+                    <div class="cell">
+                        <img src="Screenshot 2024-08-02 223608.png" >
+                    </div>
+
+                    <div class="cell">
+                        <img src="Screenshot 2024-08-02 223612.png" >
+                    </div>
+
+                    <div class="cell">
+                        <img src="Screenshot 2024-08-02 223619.png" >
+                    </div>
+
+                    <div class="cell">
+                        <img src="Screenshot 2024-08-02 223625.png" >
+                    </div>
+                    <div class="cell">
+                        <img src="Screenshot 2024-08-02 223630.png" >
+                    </div>
+                    <div class="cell">
+                        <img src="Screenshot 2024-08-02 223637.png" >
+                    </div>
+                </div>
+                
+                 </section>
+
+            <!--Contact me section-->
+            <section id="contact-me" class="contact-sect">
+                <h2>Contact</h2>
+                <div class="group">
+                    <div class="text">Please ask away. Stay connected
+                    </div>
+            
+                    <form action="https://api.web3forms.com/submit" id="contact-form" method="POST">
+                        <input type="hidden" name="access_key" value="b499c947-c5eb-4a5c-8a7f-816d701e6477">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter message" required></textarea>
+                        <button type="button" value="Submit" id="btnsubmit" onclick="validateFields();">Send Message</button>
+                   
+                    </form>
+
+                    <script>
+                        function submitForm(){
+                            var frm = document.getElementById('contact-form');
+                            frm.submit();
+                            frm.reset(); 
+                            return false;
+                        }
+
+                        function validateFields(){
+                            var name = document.getElementById('name');
+                            var email = document.getElementById('email');
+                            var message = document.getElementById('message');
+
+                            if (name.value == '' || name.value == null){
+                                name.style.borderBottomColor = 'blue';
+                                email.style.borderBottomColor = '#2aa96f';
+                                message.style.borderColor = '#2aa96f';
+                            }else{
+                                name.style.borderBottomColor = '#2aa96f';
+                                email.style.borderBottomColor = 'blue';
+                            message.style.borderColor = '#2aa96f';
+                                if (email.value == '' || name.value == null){
+                                }else{
+                                    name.style.borderBottomColor = '#2aa96f';
+                                email.style.borderBottomColor = '#2aa96f';
+                                    message.style.borderColor = 'blue';
+                                }
+                                      
+                            submitForm();
+                                    
+                                }
+                            }
+                        }
+                    </script>
+            </div>
+            
+        </section>
+        </div styles>
+        <!--CV-->
+        <div class="CV" id="content-CV" style="display: none;">
+            <a href="CV/https://1drv.ms/b/c/6ffb866b5e6bd1ef/EawW9THAJzJJqwpj3BmkCUEBktcyPli7tOTo_PUOOEgsnw?e=lKLMke" download>
+                <span>Curriculum Vitae</span>
+                <i class="fa-solid fa-download"></i>
+            </a>
+            </br>
+            <h1>Brian Anderson</h1>
+            <span>anderson.bri1909@gmail.com</span>
+            <span>0677491755</span>
+            <span>Potchefstroom, North West</span>
+            </br>
+        </br>
+        <h3>Certification and Hobbies</h3>
+        </br>
+        <h4>Certification</h4>
+        <span>National Senior Certificate 2021</span>
+        </br>
+        <span>Golden Key Member Certificate 2023</span>
+        <span></span>
+        </br>
+        </br>
+        <h4>Hobbies</h4>
+        <span>Gym; Tennis; Cycling; Reading</span>
+    </br>
+            <h3>Education</h3>
+            </br>
+            <h4>North-West University</h4>
+            <h4>February 2022 - December 2024</h4>
+            <span>Bachelor of Science in Information Technology</span>
+            <span>Potchefstroom</span>
+            </br>
+            <h4>Hoërskool Schoonspruit</h4>
+            <h4>December 2021</h4>
+            <span>National Senior Certificate</span>
+            <span>Klerksdorp</span>
+        </br>
+            <h3>WORK EXPERIENCE</h3>
+            </br>
+            <h4>Super S Butchery</h4>
+            <h4>Dec 2019 - Dec 2019</h4>
+            <span>MEAT CUTTER / COUNTER SALES</span>
+            <span>Klerksdorp</span>
+            <span class="Job description">Preparing meat and meat products for selling. Assisting customers.</span>
+            </br>
+            <h4>MCC Spar</h4>
+            <h4>Dec 2020 - Jan 2021</h4>
+            <span>CASHIER</span>
+            <span>Klerskdorp</span>
+            <span class="Job description">Adhered to rules concerning uniform and cash register handling.Served over 100 customers daily in a busy location. Performed daily tasks to ensure a neat, clean and organized store.</span>
+            </br>
+            <h4>TCT Traveling</h4>
+            <h4>Jan 2021 - Feb 2021</h4>
+            <span>INSTALLATION TECHNICIAN</span>
+            <span>Klerskdorp</span>
+            <span class="Job description">Installation of Remote Wi-fi systems</span>
+            </br>
+            <h4>Northwest University</h4>
+            <h4>Feb 2023 - Jul 2023</h4>
+            <span>DEMI</span>
+            <span>Potchefstroom</span>
+            <span class="Job description">Mark and evaluate First year students' Tests and assist students.</span>
+            </br>
+            <h4>Southern Oill(SOILL)</h4>
+            <h4>Jun 2023 - Jul 2023</h4>
+            <span>ASSISTED IT TECHNICIAN</span>
+            <span>Swellendam</span>
+            <span class="Job description">• Earned a Letter of Recommendation for exceptional IT support and technical assistance skills https://1drv.ms/b/c/6ffb866b5e6bd1ef/EaARF3F4h8hAuJI07O-76-EBzMK5oaGxRrdVWO2c_iN4lQ?   e=nSFEw7</span>
+            </br>
+        </div>
+    </main>
 </body>
 </html>
