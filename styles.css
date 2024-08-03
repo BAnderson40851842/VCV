@@ -1,31 +1,497 @@
-*{
-    padding: 0;
+:root{
+    --text-color: #aaaded;
+    --link-color: #2668be;
+    --background-color: #050520;
+    font-size: 22px;
+}
+
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    list-style:  none;
-    font-family: 'Nunito', sans-serif;
 }
 
-body{
-    background-color: #94D9EA;
+::placeholder {
+    color: #afbced;
+    opacity: 0.5; 
+}
+  
+::-ms-input-placeholder { 
+    color: #a2b7ed;
+    opacity: 0.5;
 }
 
-.main-content{
-    min-height: 100vh;
-    width: 80%;
-    margin: 2rem auto;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-}
-.left-section{
-    grid-column:  span 2 ;
-    height: 100%;
-    background-color: #00324A ;
-
+*::-webkit-scrollbar{
+    display: none;
 }
 
-.right-section{
-    grid-column:  span 5 ;
-    background-color:  #f7f7f7;
-    height: 100%;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to left, var(--background-color),#0b1a2b);
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    overflow-y: scroll;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+
+.CV{
+    padding: 100px 50px;
+    color: var(--text-color);
+    border-right: 2px solid #233d53;
+    border-left: 2px solid #233d53;
+    justify-content: space-between;
+}
+
+.CV a{
+    font-size: 30px;
+    display: inline-flex;
+    transition: color 0.3s ease, border 0.2s ease;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CV a i{
+    margin-left: 20px;
+    padding: 0 0;
+}
+
+.CV a:hover{
+    color: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+    cursor: pointer;
+}
+
+.CV h3{
+    font-size: 34px;
+    border-top: 0px solid #233d53;
+    border-bottom: 2px solid #233d53;
+}
+
+.CV h3:first-child{
+    font-size: 34px;
+    border-top: 0px solid #233d53;
+    border-bottom: 2px solid #233d53;
+}
+
+.CV h4{
+    font-size: 22px;
+}
+
+.CV span{
+    display: block;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(to right, var(--background-color),#3585c7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    height: 70px;
+    border-bottom: 1px solid #233d53;
+}
+
+nav .left a {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 500;
+    transition: font-size 0.1s;
+    vertical-align: middle;
+    line-height: 20px;
+}
+
+nav .left a:hover {
+    color: #8e9ab6;
+    font-size: 30px;
+    
+}
+
+nav .right a {
+    color: var(--text-color);
+    font-size: 16px;
+    margin: 0 12px;
+    transition: font-size 0.1s;
+    vertical-align: middle;
+    line-height: 20px;
+}
+
+nav .right a:hover {
+    color: #8e95b6;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 4px 15px;
+    border-radius: 5px;
+    transition: font-size 0.1s;
+}
+
+nav .right a:last-child:hover {
+    background-color: #8eb69b;
+    font-size: 20px;
+}
+
+nav .right a span{
+    margin-left: 5px;
+}
+
+.pdescript {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 120px 0;
+    margin-bottom: 0px;
+    gap: 40px;
+}
+
+.pdescript .text {
+    flex: 5;
+    color: var(--text-color);
+}
+
+.pdescript .text h2{
+    font-size: 45px;
+}
+
+.pdescript .text .links a{
+    display: inline-block;
+    padding: 5px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease, border 0.2s ease;
+}
+
+.pdescript .text .links a:hover{
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.pdescript .text .links{
+    margin-top: 25px;
+}
+
+.pdescript .headshot {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.pdescript .headshot img {
+    border-block: 50%;
+    border: 5px solid var(--text-color);
+    width: 350px;
+    height: 350px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.pdescript .headshot img:hover {
+    width: 500px;
+    height: 500px;
+}
+.about-me {
+    padding: 20px 50px;
+    margin-bottom: 0px;
+}
+
+.about-me .text{
+    text-align: left;
+    color: var(--text-color);
+}
+
+.about-me .text h2{
+    font-size: 35px;
+}
+.skills-section {
+    padding: 100px 50px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.skills-section a{
+    transition: color 0.3s ease, border 0.2s ease;
+}
+
+.skills-section a:hover{
+    color: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+}
+
+.skills-section h2{
+    text-align: left;
+    font-size: 35px;
+    color: var(--text-color);
+}
+
+.skills-section .text{
+    text-align: left;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.skills-section h3{
+    text-align: center;
+    font-size: 30px;
+    color: var(--text-color);
+}
+
+.skills-section .cells{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell,
+.skills-section .cells .cell-db{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+.skills-section .cells .cell img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.skills-section .cells .cell-db img{
+    width: 150px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.skills-section .cells .cell span{
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.contact-sect {
+    padding: 50px 50px;
+}
+
+.contact-sect .group {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+
+
+.contact-sect .group .text {
+    text-align: right;
+    flex: none; 
+}
+
+.contact-sect h2{
+    text-align: center;
+    font-size: 35px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.contact-sect .group form {
+    flex: none; 
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.contact-sect .group form input,
+.contact-sect .group form textarea{
+    text-align: left;
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: var(--text-color);
+    border: 0px solid;
+    border-bottom: 1px solid #235347;
+    background-color: transparent;
+    padding: 5px;
+    margin-bottom: 10px;
+    outline: none;
+    resize: none;
+    
+}
+
+.contact-sect .group form textarea{
+    border: 1px solid #235347;
+    border-radius: 5px;
+}
+
+.contact-sect .group form button {
+    margin-top: 10px; 
+    width: 100%; 
+    margin-bottom: 10px; 
+    text-align: center; 
+}
+
+.contact-sect .group form button:hover {
+    background-color: #8eb69b;
+    width: 160px;
+    height: 48px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.contact-sect .group form label{
+    color: var(--text-color);
+}
+
+@media (max-width: 850px) {
+    .pdescript .text h2{
+        font-size: 35px;
+    }
+
+    .pdescript .headshot img:hover {
+        width: 300px;
+        height: 300px;
+    }
+
+    .CV {
+        border-left: 0px ;
+        border-right: 0px ;
+    }
+
+    .CV img {
+        width: 500px;
+    }
+}
+
+@media (max-width: 740px) {
+    .pdescript{
+        flex-direction: column-reverse;
+    }
+
+    .pdescript .headshot img{
+        height: 300px;
+        width: 300px;
+    }
+
+    .skills-section .cells .cell{
+        width: 0;
+        border: 0;
+    }
+
+    .skills-section .cells .cell span{
+        display: none;
+    }
+
+    .skills-section .cells .cell img{
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+    
+    .skills-section .cells .cell-db img{
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    .contact-sect .group {
+        flex-direction: column;
+    }
+
+    .contact-sect .group .text{
+        text-align: left;
+    }
+}
+
+@media (max-width: 650px) {
+
+    :root{
+        font-size: 16px;
+    }
+
+    .CV{
+        padding: 100px 20px;
+    }
+    
+    .CV img{
+        width: 320px;
+    }
+
+    nav {
+        padding: 0 20px;
+    }
+
+    nav .left a:hover {
+        color: #8eb69b;
+        font-size: 25px;
+    }
+
+    nav .right a {
+        font-size: 22px;
+    }
+
+    nav .right a:last-child {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+
+    nav .right a span{
+        display: none;
+    }
+
+    .pdescript{
+        padding: 20px;
+    }
+
+    .about-me{
+        padding: 20px;
+    }
+
+    .skills-section{
+        padding: 20px;
+    }
+
+    .contact-sect{
+        padding: 20px;
+    }
+
+    .contact-sect .group form input,
+    .contact-sect .group form textarea{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 370px){
+
+    nav .left a{
+        font-size: 20px;
+    }
+
+    nav .right a {
+        font-size: 20px;
+        margin: 0 2.5px;
+    }
+
+    .CV h3 {
+        font-size: 24px;
+    }
+
+    .CV h4 {
+        font-size: 20px;
+    }
 }
